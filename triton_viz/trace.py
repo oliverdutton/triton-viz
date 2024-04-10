@@ -1,6 +1,7 @@
 from triton.runtime import KernelInterface
 from triton.runtime.interpreter import InterpretedFunction
-from triton import JITFunction
+from triton.runtime import JITFunction
+
 
 from .interpreter import patch, record_builder
 from typing import Tuple
