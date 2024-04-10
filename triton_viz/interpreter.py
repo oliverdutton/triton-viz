@@ -223,7 +223,7 @@ def _create_masked_load(fn):
             access_masks=valid_access_masks,
             invalid_access_masks=invalid_access_masks,
             original_offsets=original_offsets,
-            original_masks=masks.data,
+            original_masks=np.array(masks.data),
         )
         record_builder.add_record(load_record)
 
@@ -256,7 +256,7 @@ def _create_masked_store(fn):
             access_masks=valid_access_masks,
             invalid_access_masks=invalid_access_masks,
             original_offsets=original_offsets,
-            original_masks=masks.data,
+            original_masks=np.array(masks.data),
         )
         record_builder.add_record(store_record)
 
